@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Sapient_Automation">
+
+    <listeners>
+        <listener class-name="com.sapient.qa.reusableComponents.ListenersImplementation"/>
+
+        <!--
+        uncomment the below listener for retry logic
+
+        <listener class-name="com.sapient.qa.Analyzer.MyTransformer"/>
+        -->
+
+    </listeners>
+
+    <test name="Regression">
+        <classes>
+            <class name="com.sapient.qa.testcases.HomePageTest"/>
+            <class name="com.sapient.qa.testcases.MotorcyclePageTest"/>
+        </classes>
+    </test>
+</suite>
