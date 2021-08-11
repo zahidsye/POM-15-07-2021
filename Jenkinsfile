@@ -1,6 +1,6 @@
 pipeline
 {
-	agent none
+	agent any
 	stages
 	{
 		stage('Build')
@@ -22,7 +22,7 @@ pipeline
 					steps
 					{
 						echo "Smoke Test Execution is Started in Chrome"
-						bat "mvn test"
+						bat "mvn clean test -B -Dmaven.test.skip=true"
 						echo "Smoke Test Execution is Successful in Chrome"
 					}
 				}
