@@ -50,6 +50,7 @@ pipeline {
 			subject: 'Test Automation Pipeline Build Status',
 			to: 'zahidsye@gmail.com'
 		}
+	}
         	
 	}
 }
