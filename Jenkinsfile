@@ -42,6 +42,8 @@ pipeline
 	
 	
 		stage('Results'){
+			steps
+					{
 	
 	publishHTML (target: [
       allowMissing: false,
@@ -51,6 +53,7 @@ pipeline
       reportFiles: 'index.html',
       reportName: "RCov Report"
     ])
+		}
 		}
 	
 	
