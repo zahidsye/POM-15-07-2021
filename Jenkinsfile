@@ -4,8 +4,7 @@ pipeline {
   cron('0 4 * * *')
   }
   
-  stage('Build')
-		{
+  stage('Build') {
 			steps
 			{
 				echo "Build is Started"
@@ -50,7 +49,7 @@ pipeline {
 			subject: 'Test Automation Pipeline Build Status',
 			to: 'zahidsye@gmail.com'
 		}
-    
+    }
     
   
 }
