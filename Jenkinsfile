@@ -7,7 +7,7 @@ pipeline {
     stage('Test Execution') {
       steps {
         echo 'Execute Tests'
-        maven(command: "clean test -Dmaven.test.skip=true"   
+          
       }
     } 
   }
