@@ -45,14 +45,15 @@ pipeline
 			steps
 					{
 	
-	publishHTML (target: [
-      allowMissing: false,
-      alwaysLinkToLastBuild: false,
-      keepAll: true,
-      reportDir: 'reports/',
-      reportFiles: '*.*',
-      reportName: "RCov Report"
-    ])
+	
+          publishHTML target: [
+              allowMissing: false,
+              alwaysLinkToLastBuild: false,
+              keepAll: true,
+              reportDir: 'target/',
+              reportFiles: '*.*',
+              reportName: 'RCov Report'
+            ]
 		}
 		}
 	
