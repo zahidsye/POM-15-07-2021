@@ -35,5 +35,21 @@ pipeline {
             					reportTitles: ''])
 					}
 				}
+		
+		post
+	{
+		failure 
+		{
+            		echo 'This Job is Failed - Notifications have been sent to Slack and Gmail..!!'
+			
+			slackSend channel: 'test-automation',
+			color: 'good',
+			message: "*${currentBuild.currentResult}:* Job Name: ${env.JOB_NAME} || Build Number: ${env.BUILD_NUMBER}\n More information at: ${env.BUILD_URL}"
+        		
+			emailext body: "*${currentBuild.currentResult}:* Job Name: ${env.JOB_NAME} || Build Number: ${env.BUILD_NUMBER}\n More information at: ${env.BUILD_URL}",
+			subject: 'Test Automation Pipeline Build Status',
+			to: 'zahidsye@gmail.com'
+		}
+        	
 	}
 }
