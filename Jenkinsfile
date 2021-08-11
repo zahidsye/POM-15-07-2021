@@ -49,8 +49,8 @@ pipeline
       allowMissing: false,
       alwaysLinkToLastBuild: false,
       keepAll: true,
-      reportDir: 'coverage',
-      reportFiles: 'index.html',
+      reportDir: 'reports/',
+      reportFiles: '*.*',
       reportName: "RCov Report"
     ])
 		}
