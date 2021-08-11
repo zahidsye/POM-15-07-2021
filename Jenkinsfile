@@ -46,8 +46,8 @@ pipeline
               alwaysLinkToLastBuild: false,
               keepAll: true,
               reportDir: 'target/',
-              reportFiles: '*.html',
-              reportName: 'abc'
+              reportFiles: '*ExecutionReport*.html',
+              reportName: '*'
             ]
         }
     }
