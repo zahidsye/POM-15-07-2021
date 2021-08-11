@@ -9,14 +9,14 @@ pipeline {
 			steps
 			{
 				echo "Build is Started"
-				bat "mvn clean package"
+				bat "mvn clean package -DskipTests=true"
 				echo "Build is Successful"
 			}
 		}
   
     stage('Smoke Test Execution') {
       steps {
-          echo "Smoke Test Execution is Started in Chrome"
+        			echo "Smoke Test Execution is Started in Chrome"
 					bat "mvn test"
 					echo "Smoke Test Execution is Successful"
       }
@@ -35,8 +35,5 @@ pipeline {
             					reportTitles: ''])
 					}
 				}
-  
- 
-    
 	}
 }
