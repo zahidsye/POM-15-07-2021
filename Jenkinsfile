@@ -39,14 +39,9 @@ pipeline
 		}
 	
 	
-	
-	
-		stage('Results'){
-			steps
-					{
-	
-	
-          publishHTML target: [
+	 post {
+        always {
+             publishHTML target: [
               allowMissing: false,
               alwaysLinkToLastBuild: false,
               keepAll: true,
@@ -54,8 +49,8 @@ pipeline
               reportFiles: '*.*',
               reportName: '*'
             ]
-		}
-		}
+        }
+    }
 	
 	
 	
