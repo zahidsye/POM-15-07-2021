@@ -22,7 +22,7 @@ pipeline
 					steps
 					{
 						echo "Smoke Test Execution is Started in Chrome"
-						bat "mvn clean test -B -Dmaven.test.skip=true"
+						bat "mvn test -Dmaven.test.skip=false"
 						echo "Smoke Test Execution is Successful in Chrome"
 					}
 				}
