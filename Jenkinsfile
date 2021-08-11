@@ -52,7 +52,7 @@ pipeline
               keepAll: true,
               reportDir: 'target/',
               reportFiles: '*.*',
-              reportName: 'RCov Report'
+              reportName: '*'
             ]
 		}
 		}
