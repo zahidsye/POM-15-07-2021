@@ -1,9 +1,13 @@
 pipeline {
   agent any
+  triggers  {
+  cron('0 4 * * *')
+  }
   stages {
-    stage('Execute Selenium Tests from Github Repo Using Jenkins 2.0 Pipeline') {
+    stage('Test Execution') {
       steps {
         echo 'Execute Tests'
+        sh "mvn test"
        
       }
     } 
