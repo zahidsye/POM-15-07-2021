@@ -48,7 +48,7 @@ public class ListenersImplementation extends ObjectsRepo implements ITestListene
         } catch (IOException e) {
             e.printStackTrace();
         }
-        String screenshotsPath2 = "../screenshots/" + dest.getName();
+        String screenshotsPath2 = "./screenshots/" + dest.getName();
         try {
             test.addScreenCaptureFromPath(screenshotsPath2, "Test case failure screenshot");
         } catch (Exception e) {
