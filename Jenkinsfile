@@ -47,7 +47,7 @@ pipeline
               keepAll: true,
               reportDir: 'target/',
               reportFiles: '*.*',
-              reportName: ${env.BUILD_NUMBER}
+              reportName: 'env.BUILD_NUMBER'
             ]
         }
     }
